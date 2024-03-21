@@ -1,0 +1,20 @@
+//---------------------------------------------------------------------------
+
+#ifndef LOGFileH
+#define LOGFileH
+
+#include <vcl.h>
+#include <direct.h>
+//---------------------------------------------------------------------------
+class CLOGFile
+{
+	private:
+		AnsiString LOGDiskPath,LOGFilePath;
+		AnsiString astrWorkOrderNumber;
+	public:
+		CLOGFile::CLOGFile(void);
+		void CLOGFile::FindLogFile(TImage* ImgDisk);
+		void CLOGFile::NewFilePath(AnsiString Path);
+		bool CLOGFile::CheckDiskName();
+};
+#endif
